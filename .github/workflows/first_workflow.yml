@@ -11,3 +11,8 @@ jobs:
     steps:
       - name: Frist Step
         run: echo "hello this is my first workflow"
+
+      - name: Second step with multiple commands
+        run: |
+          echo "Exeucting command1"
+          echo "Executing command2"
