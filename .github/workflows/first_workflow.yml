@@ -1,0 +1,13 @@
+# name of the github workflow
+name: First Workflow
+
+on: workflow_dispatch
+
+jobs:
+  firstjob:
+    runs-on: ubuntu-22.04
+
+    # adding actual tasks here
+    steps:
+      - name: Frist Step
+        run: echo "hello this is my first workflow"
