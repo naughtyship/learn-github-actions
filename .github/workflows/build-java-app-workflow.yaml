@@ -21,20 +21,18 @@ jobs:
       - name: Build with Maven
         run: |
           echo "Current working directory:"
-          echo $PWD
+          echo "$PWD"
           echo "Listing files in the current working directory:"
           ls -la
           echo "Building the Java project using Maven..."
-          cd ${{ github.workspace }}/04-Day-Projects/04-Day-Project-1/my-app
-          mvn clean install
-
-          mvn package
+          cd "${{ github.workspace }}/04-Day-Project-1/my-app"
+          mvn clean package
 
       - name: Run the application
         run: |
           echo "Running the Java application..."
-          cd ${{ github.workspace }}/04-Day-Projects/04-Day-Project-1/my-app
-          java -jar target/*.jar
+          cd "${{ github.workspace }}/04-Day-Project-1/my-app"
+          java -jar target/my-app-1.0-SNAPSHOT.jar
 
       
 
