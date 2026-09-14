@@ -1,0 +1,30 @@
+# this is build workflow for building a java project
+
+name: Build Java App Workflow
+
+on: workflow_dispatch
+
+jobs:
+  BuildJavaApp:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Build with Maven
+        run: |
+          echo "Current working directory:"
+          echo $PWD
+          echo "Listing files in the current working directory:"
+          ls -la
+          echo "Building the Java project using Maven..."
+
+      
+
