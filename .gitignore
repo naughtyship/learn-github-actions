@@ -1,0 +1,5 @@
+
+# Ignore Maven wrapper files and project build output
+/04-Day-Projects/04-Day-Project-1/.mvn
+/04-Day-Projects/04-Day-Project-1/target
+
