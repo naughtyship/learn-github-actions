@@ -25,6 +25,16 @@ jobs:
           echo "Listing files in the current working directory:"
           ls -la
           echo "Building the Java project using Maven..."
+          cd ${{ github.workspace }}/04-Day-Projects/04-Day-Project-1
+          mvn clean install
+
+          mvn package
+
+      - name: Run the application
+        run: |
+          echo "Running the Java application..."
+          cd ${{ github.workspace }}/04-Day-Projects/04-Day-Project-1
+          java -jar target/*.jar
 
       
 
